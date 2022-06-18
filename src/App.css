@@ -1,3 +1,19 @@
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +51,153 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* 
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+.left-side{
+  height: 100%;
+  display: flex;
+  
+}
+.forScrolling{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.section-light{
+  scroll-snap-align: start;
+}
+
+.section-dark{
+  scroll-snap-align: start;
+}
+
+a.underline-hover-effect {
+  text-decoration: none;
+  color: inherit;
+}
+
+.underline-hover-effect {
+  display: inline-block;
+  padding-bottom: 0.25rem; /* defines the space between text and underline */
+  position: relative;
+}
+
+.underline-hover-effect::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(0, 255, 0);
+  transition: width 0.25s ease-out;
+}
+.underline-hover-effect:hover::before {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+a.course-underline-hover-effect {
+  text-decoration: none;
+  color: inherit;
+}
+
+.course-underline-hover-effect {
+  display: inline-block;
+  padding-bottom: 0.25rem; /* defines the space between text and underline */
+  position: relative;
+}
+
+.course-underline-hover-effect::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: darkgoldenrod;
+  transition: width 0.25s ease-out;
+}
+.course-underline-hover-effect:hover::before {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+
+.card{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-media{
+  padding-top: 56.25%;
+
+}
+
+.card-content{
+  flex-grow: 1;
+  background-color: #26262a;
+  /* background-color: #5ad9e5; */
+  color: rgb(151, 251, 151);
+}
+
+h5.card-content{
+  text-align: left;
+  color: rgb(200, 249, 200);
+}
+
+.main-section-content {
+  height : 100vh;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  grid-gap: 2rem;
+}
+
+@media screen and (max-width: 1050px) {
+  .main-section-content {
+    height : 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.hamburger-icon {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+
+  --size: 2.75rem;
+
+  width: var(--size);
+  height: var(--size);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10000rem;
+  box-shadow: 0 0 0.5rem 0 black;
+
+  background-color: var(--background-color);
+  color: var(--color);
+
+  z-index: 100000000;
+}
+
+#courses{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }

@@ -97,7 +97,7 @@ export default function Section({ title, light, id}) {
               </List>
             ) :
           (<Typography variant="h5" align='left' color={'#ffffff'} paragraph marginTop='0.5vh'>
-            I'm currently a junior undergraduate at the Indian Institute of Technology, Delhi. My interests include machine learning, competitive programming, programming languages and mathematical puzzles. I also like music and photography.<br/><br/>
+            I'm currently a junior undergraduate at the Indian Institute of Technology, Delhi. My interests include machine learning, competitive programming, programming languages and mathematical puzzles. I also like music and sketching.<br/><br/>
             I also enjoy sports like volleyball and footall. In my leisure time, I watch anime and anime. Fiction books (manga XD) are also something that I love reading. I am a gamer at heart (plays Genshin Impact). Along with playing games, I enjoy making games too.
           </Typography> )
         }  
